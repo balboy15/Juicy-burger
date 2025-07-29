@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Juicy Burger</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juicy Burger – Shopee Style</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="hero">
-    <img src="https://picsum.photos/400/220?burger" alt="Burger"/>
-    <h1>Burger Spesial Juicy</h1>
-    <p class="price">Rp 25.000</p>
-    <button id="orderBtn">Pesan Sekarang</button>
+  <!-- Header Shopee -->
+  <header>
+    <div class="top-bar">
+      <h1>🍔 Juicy Burger</h1>
+      <span class="cart-icon">🛒<span id="cartCount">0</span></span>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Cari burger favoritmu…">
+    </div>
+  </header>
+
+  <!-- Banner Promo -->
+  <section class="banner">
+    <img src="https://picsum.photos/400/120?burger" alt="Promo">
   </section>
+
+  <!-- Grid Produk -->
+  <main id="productList"></main>
+
+  <!-- Bottom Nav (mirip Shopee) -->
+  <footer>
+    <button id="goCheckout" disabled>
+      Checkout (<span id="totalPrice">Rp 0</span>)
+    </button>
+  </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+

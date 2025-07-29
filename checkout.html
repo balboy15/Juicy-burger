@@ -1,29 +1,71 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Checkout</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Juicy Burger</title>
+  <style>
+    :root{--orange:#ff5722;--grey:#f5f5f5}
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI}
+    body{background:var(--grey);color:#333}
+    header{background:#fff;display:flex;align-items:center;padding:12px;border-bottom:1px solid #ddd}
+    header .back{font-size:20px;margin-right:10px;text-decoration:none;color:#333}
+    header h1{font-size:18px;font-weight:600}
+    section{background:#fff;margin:10px;border-radius:8px;padding:12px}
+    section h2{font-size:16px;margin-bottom:8px}
+    .item{display:flex;gap:12px}
+    .item img{width:80px;height:80px;border-radius:6px;object-fit:cover}
+    .item-info{flex:1}
+    .item-price{color:var(--orange);font-weight:bold}
+    .voucher{color:var(--orange);font-size:14px;margin-top:10px}
+    .shipping{display:flex;justify-content:space-between;align-items:center}
+    .shipping small{color:#666}
+    .total-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #ddd;display:flex;justify-content:space-between;align-items:center;padding:12px}
+    .total-bar .total{color:var(--orange);font-weight:bold;font-size:16px}
+    .total-bar button{background:var(--orange);color:#fff;border:none;padding:12px 24px;border-radius:20px;font-size:14px}
+    input[type=tel],select{width:100%;padding:8px;border:1px solid #ccc;border-radius:4px;margin-top:4px}
+  </style>
 </head>
 <body>
-  <section class="checkout">
-    <h2>Checkout</h2>
-    <p>Item: Burger Spesial Juicy</p>
-    <p>Total: <strong>Rp 25.000</strong></p>
 
-    <label>Nomor WhatsApp</label>
-    <input type="tel" placeholder="08xxxxxxxxxx" />
+<header>
+  <a href="index.html" class="back">‹</a>
+  <h1>Checkout</h1>
+</header>
 
-    <label>Metode Bayar</label>
-    <select>
-      <option>Transfer Bank</option>
-      <option>Dana</option>
-      <option>Gopay</option>
-    </select>
+<!-- Alamat -->
+<section>
+  <h2>📍 Alamat Pengiriman</h2>
+  <p><strong>Isi alamat di bawah</strong></p>
+  <input type="text" value="Kompleks Elitra Permai 8, Jalan Raya Kakap" readonly>
+</section>
 
-    <button onclick="alert('Pesanan dikirim!')">Bayar</button>
-    <a href="index.html">← Kembali</a>
-  </section>
+<!-- Produk -->
+<section>
+  <h2>📦 Produk</h2>
+  <div class="item">
+    <img src="https://picsum.photos/200?burger" alt="Burger">
+    <div class="item-info">
+      <h3>Burger Spesial Juicy</h3>
+      <p class="item-price">Rp 25.000</p>
+    </div>
+  </div>
+</section>
+
+<!-- Voucher & Ongkir -->
+<section>
+  <div class="voucher">Voucher Ongkir: <strong>-Rp 10.000</strong></div>
+  <div class="shipping">
+    <span>Reguler</span>
+    <span>Rp 7.000</span>
+  </div>
+</section>
+
+<!-- Total -->
+<div class="total-bar">
+  <div class="total">Total: Rp 22.000</div>
+  <button onclick="alert('Pesanan berhasil!');">Buat Pesanan</button>
+</div>
+
 </body>
 </html>
